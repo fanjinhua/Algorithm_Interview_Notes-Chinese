@@ -51,7 +51,7 @@ Index
 - **基本思路**：
   - 利用**自助采样法**对训练集随机采样，重复进行 `T` 次;
   - 基于每个采样集训练一个基学习器，并得到 `T` 个基学习器；
-  - 预测时，集体**投票决策****。
+  - 预测时，集体**投票决策**，回归问题简单的平均。
     > **自助采样法**：对 m 个样本的训练集，有放回的采样 m 次；此时，样本在 m 次采样中始终没被采样的概率约为 `0.368`，即每次自助采样只能采样到全部样本的 `63%` 左右。
       <div align="center"><a href="http://www.codecogs.com/eqnedit.php?latex=\fn_jvn&space;\lim_{m\to\infty}\left&space;(&space;1-\frac{1}{m}&space;\right&space;)^m\rightarrow&space;\frac{1}{e}\approx&space;0.368"><img src="../_assets/公式_20180902220459.png" height="" /></a></div>
 
